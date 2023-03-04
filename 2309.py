@@ -4,7 +4,7 @@ from itertools import permutations
 li = sorted([int(sys.stdin.readline().strip()) for _ in range(9)])
 
 subtract = sum(li) - 100
-test = (permutations(li, 2))
+test = permutations(li, 2)
 
 for x, y in test:
     if x + y == subtract:

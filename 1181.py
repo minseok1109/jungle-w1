@@ -1,10 +1,14 @@
 import sys
 
 n = int(sys.stdin.readline())
+lst = []
 
-li = [sys.stdin.readline().strip() for _ in range(n)]
+for i in range(n):
+    lst.append(sys.stdin.readline().strip())
+set_lst = set(lst)
+lst = list(set_lst)
+lst.sort()
+lst.sort(key=len)
 
-sorted(li, key=len).sort()
-
-for i in li:
+for i in lst:
     print(i)
